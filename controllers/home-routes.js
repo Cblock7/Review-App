@@ -1,8 +1,12 @@
 const router = require("express").Router();
+const fs = require("fs")
+const path = require("path")
+// const sequelize = require('../config/connection');
 
 router.get("/", async (req, res) => {
+  // console.log("test");
   try {
-    res.status(200).json("Home Route Connection");
+    res.sendFile(path.join(__dirname, '../views/index.html'));
   } catch (err) {
     res.status(500).json(err);
   }
