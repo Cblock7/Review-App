@@ -1,5 +1,5 @@
 -- Drops the database if it already exists --
-DROP DATABASE IF EXISTS user_reviews;
+DROP DATABASE IF EXISTS user_reviewsDB;
 
 -- Creates the database -- 
-CREATE DATABASE user_reviews;
+CREATE DATABASE user_reviewsDB;
