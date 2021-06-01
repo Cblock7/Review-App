@@ -2,10 +2,10 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 
-class user_reviews extends Model {}
+class user_reviewsDB extends Model {}
 
 
-user_reviews.init(
+user_reviewsDB.init(
     {
       user_id: {
         type: DataTypes.INTEGER,
