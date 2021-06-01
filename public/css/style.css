@@ -1,7 +1,8 @@
 body {
   background-color: black;
+  color: aliceblue;
+  font-family: "ZCOOL KuaiLe", cursive;
 }
 header {
   font-size: 4rem;
-  color: aliceblue;
 }
