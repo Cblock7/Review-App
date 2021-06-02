@@ -11,6 +11,11 @@ const concertData = [
     venue: "The Marquis",
     city: "Denver",
   },
+  {
+    date: "August 21st, 2021",
+    venue: "The Spot",
+    city: "Austin",
+  },
 ];
 
 const seedConcerts = () => Concerts.bulkCreate(concertData);
