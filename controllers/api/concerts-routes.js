@@ -24,12 +24,12 @@ router.get("/", async (req, res) => {
 });
 
 // Get a concert by it's user_id
-router.get("/:user_id", async (req, res) => {
+router.get("/:id", async (req, res) => {
   try {
     const findOneConcert = await Concerts.findByPk(req.params.id);
 
-    if (!findOneReview) {
-      res.status(404).json({ message: "Unable to find review with that ID" });
+    if (!findOneConcert) {
+      res.status(404).json({ message: "Unable to find concert with that ID" });
     }
     res.status(200).json(findOneConcert);
   } catch (err) {
