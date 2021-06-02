@@ -7,6 +7,7 @@ Reviews.init(
   {
     user_id: {
       type: DataTypes.INTEGER,
+      allowNull: false,
       primaryKey: true,
       autoIncrement: true,
     },
@@ -23,6 +24,14 @@ Reviews.init(
     review: {
       type: DataTypes.STRING,
       allowNull: false,
+    },
+    concert_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: "concerts",
+        key: "id",
+      },
     },
   },
   {
