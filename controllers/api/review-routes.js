@@ -4,7 +4,13 @@ const { Reviews, Concerts } = require("../../models");
 // Get all reviews
 router.get("/", async (req, res) => {
   try {
-    const findAllReviews = await Reviews.findAll();
+    const findAllReviews = await Reviews.findAll({
+      order: [["name", "asc"]],
+      attributes: {
+        exclude: ["createdAt", "updatedAt", "concertId"],
+      },
+      include: [{ model: Concerts, attributes: ["date", "venue", "city"] }],
+    });
     res.status(200).json(findAllReviews);
   } catch (err) {
     res.status(500).json(err);
@@ -25,10 +31,15 @@ router.get("/:user_id", async (req, res) => {
   }
 });
 
-// Create a new review
+// // add a review
 router.post("/", async (req, res) => {
   try {
-    const createdReview = await Reviews.create(req.body);
+    const createdReview = await Reviews.create({
+      name: req.body.name,
+      email: req.body.email,
+      review: req.body.review,
+    });
+    
     res.status(200).json(createdReview);
   } catch (err) {
     res.status(500).json(err);
