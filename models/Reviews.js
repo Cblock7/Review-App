@@ -12,15 +12,32 @@ Reviews.init(
     },
     name: {
       type: DataTypes.STRING,
+      allowNull: false,
     },
     email: {
       type: DataTypes.STRING,
+      validate: {
+        isEmail: true,
+      },
     },
     review: {
       type: DataTypes.STRING,
+      allowNull: false,
     },
   },
   {
+    //Hooks to normalize data
+    hooks: {
+      beforeCreate(userData) {
+        userData.email = userData.email.trim().toLowerCase();
+        return userData.email;
+      },
+      beforeUpdate(userData) {
+        userData.email = userData.email.trim().toLowerCase();
+        return userData.email;
+      },
+    },
+
     sequelize,
     timestamps: true,
     freezeTableName: true,
