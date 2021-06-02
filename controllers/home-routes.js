@@ -11,7 +11,7 @@ router.get("/", async (req, res) => {
     const moshData = await Reviews.findAll();
 
     const mosh = moshData.map((reviews) => reviews.get({ plain: true }));
-    res.render("homepage", mosh);
+    res.render("homepage");
   } catch (err) {
     res.status(500).json(err);
   }
