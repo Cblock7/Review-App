@@ -25,11 +25,11 @@ Reviews.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    show_id: {
+    concert_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: "UpcomingShows",
+        model: "concerts",
         key: "id",
       },
     },

@@ -1,10 +1,10 @@
-const UpcomingShows = require("./upcomingShows");
+const Concerts = require("./Concerts");
 const Reviews = require("./Reviews");
 
-UpcomingShows.hasMany(Reviews);
+Concerts.hasMany(Reviews);
 
-Reviews.belongsTo(UpcomingShows, {
-  foreignKey: "show_id",
+Reviews.belongsTo(Concerts, {
+  foreignKey: "concert_id",
 });
 
-module.exports = { Reviews, UpcomingShows };
+module.exports = { Reviews, Concerts };
