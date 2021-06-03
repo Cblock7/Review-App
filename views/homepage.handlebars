@@ -1,5 +1,21 @@
-<div class="row justify-content-center">
+<div class="col text-center">
   <h1>UPCOMING SHOWS</h1>
+  {{#each concerts as |concert|}}
+    <ul>
+      <ui>{{concert.venue}}</ui>
+      <ui>{{concert.date}}</ui>
+      <ui>{{concert.city}}</ui>
+    </ul>
+  {{/each}}
+
+</div>
+<div class="col text-center">
+  <h1>COMMENTS</h1>
+  {{#each reviews as |user|}}
+    <div class="col">
+      <p>{{user.name}}: {{user.review}}</p>
+    </div>
+  {{/each}}
 </div>
 <div class="row justify-content-center">
   <div>

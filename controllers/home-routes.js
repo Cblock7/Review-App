@@ -1,20 +1,19 @@
-  
 const router = require("express").Router();
-const fs = require("fs")
-const path = require("path")
-const Reviews = require("../models/Reviews");
-
+const { Reviews, Concerts } = require("../models");
 
 router.get("/", async (req, res) => {
   try {
-    
-    const moshData = await Reviews.findAll();
+    const concertData = await Concerts.findAll();
+    const reviewData = await Reviews.findAll();
 
-    const mosh = moshData.map((reviews) => reviews.get({ plain: true }));
-    res.render("homepage");
+    const reviews = reviewData.map((reviews) => reviews.get({ plain: true }));
+
+    const concerts = concertData.map((concerts) =>
+      concerts.get({ plain: true })
+    );
+    res.render("homepage", { reviews, concerts });
   } catch (err) {
     res.status(500).json(err);
-
   }
 });
 
