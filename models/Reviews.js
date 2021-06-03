@@ -25,14 +25,14 @@ Reviews.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    concert_id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      references: {
-        model: "concerts",
-        key: "id",
-      },
-    },
+    // concert_id: {
+    //   type: DataTypes.INTEGER,
+    //   allowNull: false,
+    //   references: {
+    //     model: "concerts",
+    //     key: "id",
+    //   },
+    // },
   },
   {
     //Hooks to normalize data

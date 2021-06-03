@@ -38,8 +38,8 @@ router.post("/", async (req, res) => {
       name: req.body.name,
       email: req.body.email,
       review: req.body.review,
+      
     });
-    
     res.status(200).json(createdReview);
   } catch (err) {
     res.status(500).json(err);
