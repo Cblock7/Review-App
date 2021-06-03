@@ -6,3 +6,17 @@ body {
 header {
   font-size: 4rem;
 }
+
+.card {
+  height: 10rem;
+  font-family: "Odibee Sans", cursive;
+  font-size: 2rem;
+}
+
+#show-card {
+  height: 20rem;
+}
+
+#mosh-display {
+  font-size: 5rem;
+}

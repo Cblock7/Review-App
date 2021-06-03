@@ -1,36 +1,50 @@
-<div class="col text-center">
+<div class="row justify-content-center p-3">
   <h1>UPCOMING SHOWS</h1>
-  {{#each concerts as |concert|}}
-    <ul>
-      <ui>{{concert.venue}}</ui>
-      <ui>{{concert.date}}</ui>
-      <ui>{{concert.city}}</ui>
-    </ul>
-  {{/each}}
+</div>
+  <div class="row justify-content-center">
+    <div id="show-card" class="card bg-dark border border-danger w-75">
+      <div class="card-body">{{#each concerts as |concert|}}
+          <ul>
+            <ui>{{concert.date}} |</ui>
+            <ui>{{concert.venue}} |</ui>
+            <ui>{{concert.city}}</ui>
+          </ul>
+        {{/each}}</div>
+    </div>
+  </div>
 
 </div>
-<div class="col text-center">
-  <h1>COMMENTS</h1>
-  {{#each reviews as |user|}}
-    <div class="col">
-      <p>{{user.name}}: {{user.review}}</p>
-    </div>
-  {{/each}}
+<div class="d-flex justify-content-center">
+  <h1>ONLINE MOSH</h1>
 </div>
-<div class="row justify-content-center">
-  <div>
-    <h1>ONLINE MOSH</h1>
-    <form id="mosh-submit-button">
-      <div class="form-group">
+<div class="row p-3">
+  <div class="d-flex flex-column align-items-center col-6">
+    <div class="card bg-dark border border-danger w-100">
+      <div id="mosh-display" class="card-body">{{#each reviews as |user|}}
+          <div class="col">
+            <p>{{user.name}}: {{user.review}}</p>
+          </div>
+        {{/each}}</div>
+    </div>
+  </div>
+  <div class="d-flex flex-column align-items-center col-6">
+    <form
+      class="bg-dark border rounded border-danger justify-content-center"
+      id="mosh-submit-button"
+    >
+      <div class="d-flex justify-content-center align-items-center p-1">
+        <h3>Get in the pit!</h3>
+      </div>
+      <div class="form-group pl-3 pr-3">
         <label for="mosh-name-input">Name</label>
         <input
           type="text"
           class="form-control"
           id="mosh-name-input"
-          placeholder="Name"
+          placeholder="Your name here"
         />
       </div>
-      <div class="form-group">
+      <div class="form-group pl-3 pr-3">
         <label for="mosh-email-input">Email</label>
         <input
           type="email"
@@ -39,16 +53,20 @@
           placeholder="name@email.com"
         />
       </div>
-      <div class="form-group">
+      <div class="form-group pl-3 pr-3">
         <label for="mosh-text-area">Comment below: </label>
-        <textarea class="form-control" id="mosh-text-area" rows="3"></textarea>
+        <textarea
+          class="form-control"
+          id="mosh-text-area"
+          rows="3"
+          placeholder="Keep it classy!"
+        ></textarea>
       </div>
-
-      <button type="submit" class="btn btn-dark">
-        Submit
-      </button>
-
+      <div class="d-flex justify-content-center col-12 pt-1 pb-3">
+        <button type="submit" class="btn btn-dark">Submit</button>
+      </div>
     </form>
+
   </div>
 </div>
 <script src="/js/create-review.js"></script>
