@@ -23,8 +23,18 @@
     <title>Trilogybyte</title>
   </head>
   <body>
+   
     <div class="d-flex justify-content-center">
-      <header>Trilogybyte</header>
+      <header id="band-name"></header>
+        <script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
+        <script>
+          new TypeIt("#band-name", {
+          strings: "Trilogybyte!",
+          speed: 75,
+          loop: false,
+          cursor: false
+          }).go();
+        </script>
     </div>
     <main class="container">
       <div class="row justify-content-center">
