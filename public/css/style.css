@@ -20,3 +20,12 @@ header {
 #mosh-display-card {
   height: fit-content;
 }
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+  ul {
+    font-size: 1.5rem;
+  }
+}
