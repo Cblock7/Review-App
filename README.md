@@ -6,8 +6,6 @@
 
 This full-stack application allows users to view Trilogybyte's upcoming shows and other user's comments. Additionally, users can publish their own comments for others to view.
 
-![Screenshot of Application](./assets/images/screenshot.png)
-
 ## Table of Contents
 
 - [Installation Instructions](#Installation-Instructions)
@@ -16,6 +14,9 @@ This full-stack application allows users to view Trilogybyte's upcoming shows an
 - [Contributors](#contributors)
 - [Technologies Used](#technologies)
 - [License](#License)
+
+![Screenshot of Application](./public/assets/images/screenshot1.png)
+![Screenshot of Application](./public/assets/images/screenshot2.png)
 
 ## Usage Information
 
