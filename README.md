@@ -16,7 +16,7 @@ This full-stack application allows users to view Trilogybyte's upcoming shows an
 - [Technologies Used](#technologies-used)
 
 ![Screenshot of Application](./public/assets/images/screenshot1.png)
-![Screenshot of Application](./public/assets/images/screenshot2.png)
+![Screenshot of Application](./public/assets/images/screenshot2.PNG)
 
 ## Usage Information
 
